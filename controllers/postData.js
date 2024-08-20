@@ -1,15 +1,16 @@
 const postData = (req, res) => {
     const delay = Math.floor(Math.random() * 1000) + 1;
     
-    setTimeout(() => {
+  setTimeout(() => {
+        let requestsPerSecond = 0;
+      
       if (requestsPerSecond > 50) {
         res.status(429).send("Too Many Requests");
-      } else {
+      } else {        
         res.json({ index: req.body.index });
       }
-        let requestsPerSecond = 0;
         setInterval(() => (requestsPerSecond = 0), 1000);
     }, delay);
 }
 
-module.exports = postData;
+module.exports = {postData};

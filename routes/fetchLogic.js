@@ -1,6 +1,8 @@
 const express = require('express');
-const postData = require('../controllers/postData');
+const {postData} = require('../controllers/postData');
 
-const postRoute = express.Router()
+const fetchLogicRoutes = express.Router()
 
-module.exports = { postRoute };
+fetchLogicRoutes.post("/", postData)
+
+module.exports = { fetchLogicRoutes };

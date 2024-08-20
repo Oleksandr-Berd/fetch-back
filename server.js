@@ -4,7 +4,7 @@ require('colors');
 
 const app = require("./app");
 
-const pathToEnv = path.join(__dirname, "config", ".env");
+const pathToEnv = path.join(__dirname, ".env");
 dotenv.config({ path: pathToEnv });
 const { PORT } = process.env;
 

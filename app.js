@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const session = require('express-session');
 
-const fetchLogicRoutes = require('./routes/fetchLogic');
+const {fetchLogicRoutes} = require('./routes/fetchLogic');
 
 const app = express();
 
